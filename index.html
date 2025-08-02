@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Panchal | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+  <!-- ===========================
+       PRELOADER
+  ============================ -->
+  <div id="preloader">
+    <div class="preloader-text">Hi, I'm Om Panchal</div>
+    <div class="preloader-sub">Creative Web Developer</div>
+    <div class="preloader-sub">Welcome to my portfolio</div>
+  </div>
+
+  <!-- ===========================
+       NAVIGATION
+  ============================ -->
+   <header>
+    <nav class="navbar">
+      <div class="logo">Om Panchal</div>
+      <button class="menu-btn" id="menu-btn">Menu ☰</button>
+    </nav>
+  </header>
+
+  <!-- Sidebar Menu -->
+  <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">×</button>
+    <ul class="sidebar-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Dummy sections for scrolling -->
+  
+  <script src="script.js"></script>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+const sidebar = document.getElementById('sidebar');
+const closeBtn = document.getElementById('close-btn');
+
+menuBtn.addEventListener('click', () => {
+  sidebar.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  sidebar.classList.remove('active');
+});
+
+// Optional: Close sidebar when a link is clicked
+document.querySelectorAll('.sidebar-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+  });
+});
+
+</script>
+
+<style>
+  .nav-item.active {
+    color: #00bcd4;
+  }
+  .nav-item.active::after {
+    width: 100%;
+  }
+</style>
+
+
+  <!-- ===========================
+       HERO SECTION
+  ============================ -->
+  <section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+      <span id="typed-text"></span>
+    </p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</section>
+
+<!-- Typed.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  const typed = new Typed('#typed-text', {
+    strings: [
+      'I am a passionate web developer.',
+      'I turn ideas into code.',
+      'I love building creative UIs.',
+      'I develop modern, responsive websites.'
+    ],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1500,
+    startDelay: 500,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|'
+  });
+</script>
+ <div class="marquee-container">
+      <div class="marquee-track">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Artificial_Intelligence_logo.png" alt="AI" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/ML_Logo.png" alt="ML" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Deep_Learning_Logo.png" alt="DL" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Data_science_disciplines.png" alt="Data Science" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Neural_network_example.png" alt="NN" />
+        <!-- Repeat for smoother scroll -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Artificial_Intelligence_logo.png" alt="AI" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/ML_Logo.png" alt="ML" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Deep_Learning_Logo.png" alt="DL" />
+      </div>
+    </div>
+
+  <!-- ===========================
+       ABOUT SECTION
+  ============================ -->
+  <section class="about" id="about">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="assets/images/image1.jpeg" alt="My Photo" />
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm Om Panchal, a passionate and detail-oriented web developer
+        with a strong background in front-end and back-end technologies. I love building
+        clean, responsive, and user-friendly interfaces that bring ideas to life.
+      </p>
+      <p>
+        With experience in technologies like HTML, CSS, JavaScript, React, and Node.js,
+        I constantly strive to improve and learn new things every day. Whether it's
+        designing a beautiful UI or optimizing performance, I enjoy every part of the development process.
+      </p>
+      <p>
+        I'm currently exploring the world of blockchain and AI to build smarter, secure, and future-ready applications.
+      </p>
+      <div class="about-skills">
+        <h3>My Key Skills:</h3>
+        <ul>
+          <li>✅ Web Design & Development</li>
+          <li>✅ React & Tailwind CSS</li>
+          <li>✅ Backend with Node.js & Express</li>
+          <li>✅ Blockchain dApps & MetaMask Integration</li>
+          <li>✅ AI/ML Integration in Web Apps</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===========================
+       PROJECTS SECTION
+  ============================ -->
+  <!-- Add this section to your portfolio body -->
+<section class="projects" id="projects">
+  <h2>My Projects</h2>
+  <div class="image-gallery">
+    <div class="image-card">
+      <img src="assets/images/image1.jpeg" alt="Project 1" />
+      <div class="caption">Blockchain Event Ticketing System</div>
+    </div>
+    <div class="image-card hover-variant">
+      <img src="assets/images/image1.jpeg" alt="Project 2" />
+      <div class="caption">AI Mental Health Chatbot</div>
+    </div>
+    <div class="image-card hover-glow">
+      <img src="assets/images/image1.jpeg" alt="Project 3" />
+      <div class="caption">FarmChain - Equipment Rental</div>
+    </div>
+  </div>
+</section>
+
+  <!-- ===========================
+       ACHIEVEMENTS SECTION
+  ============================ -->
+  <section id="achievements" class="section">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Top 1% in National Hackathon 2025 for Blockchain App</li>
+      <li>Published a research paper on AI in Healthcare (Springer 2025)</li>
+      <li>Winner of College Smart India Hackathon 2024</li>
+    </ul>
+  </section>
+
+  <!-- ===========================
+       SKILLS SECTION
+  ============================ -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skill-list">
+      <li>Python, JavaScript, Java</li>
+      <li>React, Node.js, Express, MongoDB</li>
+      <li>TensorFlow, Scikit-learn, OpenCV</li>
+      <li>Solidity, Hardhat, MetaMask Integration</li>
+      <li>HTML5, CSS3, Tailwind CSS</li>
+    </ul>
+  </section>
+
+  <!-- ===========================
+       CONTACT SECTION
+  ============================ -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: om.panchal.dev@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/" target="_blank">github.com/om-panchal</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/" target="_blank">linkedin.com/in/om-panchal</a></p>
+  </section>
+
+  <!-- ===========================
+       FOOTER
+  ============================ -->
+  <footer>
+    <p>&copy; 2025 Om Panchal. All rights reserved.</p>
+  </footer>
+
+  <!-- ===========================
+       SCRIPT
+  ============================ -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+<style></style>
